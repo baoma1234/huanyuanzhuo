@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:text="name"
+        android:textColor="@color/main_black"
+        android:textSize="@dimen/sp_26" />
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="@dimen/dp_16"-->
+    <!--android:layout_marginEnd="@dimen/dp_16">-->
+
+    <caixin.android.com.widget.CodeContainer
+        android:id="@+id/cc_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--</FrameLayout>-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/main_line" />
+</LinearLayout>

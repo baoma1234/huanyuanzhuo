@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <caixin.android.com.widget.NumberIcon
+            android:id="@+id/ni_code"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/dp_12"
+            app:textsize="13" />
+
+        <TextView
+            android:textSize="22sp"
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_12"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:src="@mipmap/next" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/main_line" />
+</LinearLayout>

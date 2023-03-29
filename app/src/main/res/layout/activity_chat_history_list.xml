@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/title_bar"></include>
+
+        <RadioGroup
+            android:id="@+id/rg_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbtn_message"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/selector_radio_btn_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="@string/total"
+                android:textColor="@color/tv_radio_button_color"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbtn_img"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_radio_btn_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="@string/im_input_img"
+                android:textColor="@color/tv_radio_button_color"
+                android:textSize="16sp" />
+
+
+            <RadioButton
+                android:id="@+id/rbtn_ziliao"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_radio_btn_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="@string/im_input_ziliao"
+                android:textColor="@color/tv_radio_button_color"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="caixin.android.com.viewmodel.ChangePassViewModel" />
+
+        <variable
+            name="viewModel"
+            type="caixin.android.com.viewmodel.ChangePassViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:onClick="@{() -> viewModel.onBackPressed()}"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:tint="@color/color_333333"
+                android:src="@mipmap/icon_back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/change_password"
+                android:textColor="@color/color_333333"
+                android:textSize="18sp"
+                android:typeface="monospace"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            binding:cardCornerRadius="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_old_password"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center|bottom"
+                        android:hint="@string/input_old_password"
+                        android:inputType="textPassword"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/textColorHint"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_old_switch_password"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        binding:srcCompat="@mipmap/show_psw_press" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_new_password"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center|bottom"
+                        android:hint="@string/input_new_password"
+                        android:inputType="textPassword"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/textColorHint"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_new_switch_password"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        binding:srcCompat="@mipmap/show_psw_press" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_confirm_new_password"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center|bottom"
+                        android:hint="@string/confirm_new_password"
+                        android:inputType="textPassword"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/textColorHint"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_confirm_new_switch_password"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        binding:srcCompat="@mipmap/show_psw_press" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="#E6E6E6" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button_confirm"
+            style="@style/mainBtnCommonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:enabled="true"
+            android:text="@string/confirm" />
+    </LinearLayout>
+</layout>

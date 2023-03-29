@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_333333">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/pv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:src="@mipmap/icon_download" />
+    </FrameLayout>
+</layout>

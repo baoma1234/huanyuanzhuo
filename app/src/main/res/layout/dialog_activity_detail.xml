@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/delete" />
+
+    <ImageView
+        android:id="@+id/iv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_close"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/ll_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@+id/iv_detail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_btn_common_bg">
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="立即领取"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</RelativeLayout>

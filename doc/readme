@@ -1,0 +1,14 @@
+
+//zxing二维码关于界面调整介绍
+https://github.com/bingoogolapple/BGAQRCode-Android
+
+
+//CoordinatorLayout 中RecyclerView嵌套RecyclerView 造成的滑动冲突
+LayoutManager layoutManager = new LinearLayoutManager(this);
+layoutManager.setAutoMeasureEnabled(true);
+recyclerView.setLayoutManager(layoutManager);
+recyclerView.setNestedScrollingEnabled(false);
+
+//为RecyclerView设置了ItemDecorations之后，在Adapter刷新数据notifyDataSetChanged后，item的间距会不断增大。
+ if (recyclerView.getItemDecorationCount() == 0) {
+    recyclerView.addItemDecoration(new SpacesItemDecoration2(50, 20));

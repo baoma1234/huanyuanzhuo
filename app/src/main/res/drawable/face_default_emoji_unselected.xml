@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景  gradient是渐变,corners定义的是圆角 -->
+    <item>
+        <shape>
+            <corners android:radius="2dp" />
+            <solid android:color="@color/transparent" />
+        </shape>
+    </item>
+
+    <!-- 进度条 -->
+    <item
+        android:drawable="@mipmap/face_default_emoji_unselected"
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp"></item>
+
+</layer-list>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="caixin.android.com.viewmodel.ContactViewModel" />
+
+        <variable
+            name="viewModel"
+            type="caixin.android.com.viewmodel.ContactViewModel" />
+    </data>
+
+   <!-- <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srlRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="false"
+        app:srlEnableRefresh="true">-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_contact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <caixin.android.com.widget.WaveSideBarView
+                android:id="@+id/side_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:sidebarBackgroundColor="@color/colorPrimary" />
+        </FrameLayout>
+<!--    </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+</layout>

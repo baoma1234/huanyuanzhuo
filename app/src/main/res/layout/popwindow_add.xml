@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_layout_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_add_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@mipmap/add_add_friend" />
+
+        <TextView
+            android:id="@+id/tv_add_friend"
+            android:layout_width="75dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="@string/add_friend"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BDBDBD" />
+
+    <LinearLayout
+        android:id="@+id/ll_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@mipmap/add_scan" />
+
+        <TextView
+            android:id="@+id/tv_scan"
+            android:layout_width="75dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="@string/scan"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

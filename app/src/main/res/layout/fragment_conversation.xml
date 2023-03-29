@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="caixin.android.com.viewmodel.ConversationViewModel" />
+
+        <variable
+            name="viewModel"
+            type="caixin.android.com.viewmodel.ConversationViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="寰宇通讯"
+                    android:textColor="@color/color_333333"
+                    android:textSize="18sp"
+                    android:typeface="monospace"
+                    tools:ignore="HardcodedText,RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/iv_add_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/icon_add_1" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/search_bar_view"
+                layout="@layout/search_bar_with_padding" />
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/sr_conversation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_conversation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </LinearLayout>
+
+        <caixin.android.com.widget.HomeAdView
+            android:id="@+id/home_ad"
+            android:layout_width="70dp"
+            android:layout_height="68dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="170dp" />
+
+    </RelativeLayout>
+
+
+</layout>

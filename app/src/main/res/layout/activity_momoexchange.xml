@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_gray"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <caixin.android.com.widget.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:titleBarBackground="@color/colorPrimary"
+            app:titleBarLeftImage="@mipmap/icon_back" />
+
+        <!--   <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="#FEFCEC"
+               android:paddingStart="@dimen/dp_12"
+               android:paddingTop="@dimen/dp_10"
+               android:paddingEnd="@dimen/dp_12"
+               android:paddingBottom="@dimen/dp_10"
+               android:text="@string/exchange_momo_good_hint"
+               android:textColor="#FAAA76"
+               android:textSize="12sp" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="110dp"
+                android:paddingStart="@dimen/dp_12"
+                android:text="可用彩金"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_enable_momo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="110dp"
+                android:paddingStart="@dimen/dp_12"
+                android:text="兑换金额"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/sp_16" />
+
+            <EditText
+                android:id="@+id/et_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="兑换金额不少于10元"
+                android:inputType="number"
+                android:maxLength="9"
+                android:maxLines="1"
+                android:textColor="@color/main_black"
+                android:textColorHint="@color/main_text_gray"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageButton
+                android:id="@+id/ibtn_del_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:src="@mipmap/del"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="110dp"
+                android:paddingStart="@dimen/dp_12"
+                android:text="兑换平台"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_choose_platform"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/main_black"
+                android:textColorHint="@color/main_text_gray"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="@color/main_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="110dp"
+                android:paddingStart="@dimen/dp_12"
+                android:text="平台账号"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/sp_16" />
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="请输入平台账号"
+                android:inputType="textEmailAddress"
+                android:maxLength="18"
+                android:maxLines="1"
+                android:textColor="@color/main_black"
+                android:textColorHint="@color/main_text_gray"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageButton
+                android:id="@+id/ibtn_del_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:src="@mipmap/del"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/main_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/tv_regist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:paddingStart="@dimen/dp_12"
+                android:text="兑换彩金请联系客服!"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_exchange_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingEnd="@dimen/dp_12"
+                android:text="彩金兑换记录"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_exchange"
+            style="@style/mainBtnCommonStyle"
+            android:layout_marginTop="50dp"
+            android:text="确认兑换" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:lineSpacingExtra="3dp"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:text="@string/exchange_momo_msg"
+                android:textColor="#30E1E0"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </LinearLayout>
+</layout>

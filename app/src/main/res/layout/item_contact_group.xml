@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:duplicateParentState="true">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="111111111"
+            android:textColor="#8C8C8C"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@mipmap/jiantou_right" />
+
+        <TextView
+            android:id="@+id/unread_msg_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/unread_dot"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/demo_social_sns_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_dig"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/show_psw" />
+
+        <TextView
+            android:id="@+id/digBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="赞"
+            android:textColor="#d2d2d2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="#707070" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_comment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/show_psw" />
+
+        <TextView
+            android:id="@+id/commentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="评论"
+            android:textColor="#d2d2d2" />
+    </LinearLayout>
+</LinearLayout>

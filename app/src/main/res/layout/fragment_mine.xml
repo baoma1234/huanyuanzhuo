@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="caixin.android.com.viewmodel.MineViewModel" />
+
+        <variable
+            name="viewModel"
+            type="caixin.android.com.viewmodel.MineViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_mine_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="20dp" />
+
+                    <TextView
+                        android:id="@+id/user_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_toRightOf="@+id/iv_avatar"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_use_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/user_nickname"
+                        android:layout_alignLeft="@+id/user_nickname"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_qr_code"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/iv_jiantou"
+                        android:background="@mipmap/ic_qr_code" />
+
+                    <ImageView
+                        android:id="@+id/iv_jiantou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@mipmap/jiantou_right"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_collect"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="0dp"
+                        android:drawableStart="@mipmap/ic_collect"
+                        android:drawablePadding="13dp"
+                        android:gravity="center"
+                        android:text="@string/collect"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="ContentDescription,HardcodedText,RelativeOverlap" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@mipmap/jiantou_right"
+                        tools:ignore="ContentDescription" />
+
+                    <!--    <Switch
+                            android:id="@+id/voice_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:thumb="@drawable/switch_custom_thumb_selector"
+                            android:track="@drawable/switch_custom_track_selector" />-->
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_security_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="0dp"
+                        android:drawableStart="@mipmap/ic_security_setting"
+                        android:drawablePadding="20dp"
+                        android:gravity="center"
+                        android:text="修改密码"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="ContentDescription,HardcodedText,RelativeOverlap" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@mipmap/jiantou_right"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_normal_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_change_pay_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="0dp"
+                        android:drawableStart="@mipmap/ic_setting"
+                        android:drawablePadding="17dp"
+                        android:gravity="center"
+                        android:text="@string/normal_setting"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="ContentDescription,HardcodedText,RelativeOverlap" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@mipmap/jiantou_right"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_current_version_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_version_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="0dp"
+                        android:drawableStart="@mipmap/ic_version_infor"
+                        android:drawablePadding="17dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="ContentDescription,HardcodedText,RelativeOverlap" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@mipmap/jiantou_right"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/selector_btn_red_bg"
+                    android:enabled="true"
+                    android:text="@string/exit_login"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_guanggao"
+    android:layout_width="70dp"
+    android:layout_height="68dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iv_guanggao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/home_lottery_guanggao" />
+
+    <ImageView
+        android:id="@+id/iv_guanggao_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:src="@mipmap/red_close" />
+</RelativeLayout>

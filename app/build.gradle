@@ -1,0 +1,177 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: rootProject.ext.android.applicationId,
+                JPUSH_APPKEY : "ad0a1a396fbc90617caf4099", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    dataBinding {
+        enabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        def buildType = variant.buildType.name
+        def createTime = new Date().format("YYYYMMdd_HHmm", TimeZone.getTimeZone("GMT+08:00"))
+        variant.outputs.all {
+            outputFileName = createTime + "_" + buildType + ".apk"
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    greendao {
+        schemaVersion 11 //数据库版本号
+        daoPackage 'caixin.android.com.dao'
+// 设置DaoMaster、DaoSession、Dao 包名
+        targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录,请注意，这里路径用/不要用.
+        generateTests false //设置为true以自动生成单元测试。
+        targetGenDirTests 'src/main/java' //应存储生成的单元测试的基本目录。默认为 src / androidTest / java。
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../doc/caixin.jks")
+            storePassword "caixin"
+            keyAlias "key"
+            keyPassword "caixin"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        debug {
+            storeFile file("../doc/caixin.jks")
+            storePassword "caixin"
+            keyAlias "caixin"
+            keyPassword "caixin"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation project(path: ':datePicker')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation 'com.android.support:design:28.0.1'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //rxjava
+    implementation rootProject.ext.dependencies.rxjava
+    implementation rootProject.ext.dependencies.rxandroid
+    //rx管理View的生命周期
+    api(rootProject.ext.dependencies.rxlifecycle) {
+        exclude group: 'com.android.support'
+    }
+    api(rootProject.ext.dependencies["rxlifecycle-components"]) {
+        exclude group: 'com.android.support'
+    }
+    //rxbinding
+    api(rootProject.ext.dependencies.rxbinding) {
+        exclude group: 'com.android.support'
+    }
+    //rx权限请求
+    api(rootProject.ext.dependencies.rxpermissions) {
+        exclude group: 'com.android.support'
+    }
+    //network
+    api rootProject.ext.dependencies.okhttp
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies["converter-gson"]
+    api rootProject.ext.dependencies["adapter-rxjava"]
+    //json解析
+    api rootProject.ext.dependencies.gson
+    //glide图片加载库
+    api(rootProject.ext.dependencies.glide) {
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    //Google LiveData和ViewModel组件
+    api rootProject.ext.dependencies["lifecycle-extensions"]
+    annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
+    implementation rootProject.ext.dependencies.multidex
+    implementation rootProject.ext.dependencies.mmkv
+    implementation rootProject.ext.dependencies.luban
+    implementation rootProject.ext.dependencies.dialog
+    implementation rootProject.ext.dependencies.adapterHelper
+    implementation rootProject.ext.dependencies.okhttpLogging
+    implementation rootProject.ext.dependencies.fastjson
+    implementation rootProject.ext.dependencies.jpush
+    implementation rootProject.ext.dependencies.jcore
+    implementation rootProject.ext.dependencies.bugly_crashreport
+    implementation rootProject.ext.dependencies.bugly_nativecrashreport
+    implementation rootProject.ext.dependencies.greendao
+    implementation rootProject.ext.dependencies.greendao_generator
+    implementation rootProject.ext.dependencies.SmartRefreshLayout
+    implementation rootProject.ext.dependencies.SmartRefreshHeader
+
+    implementation rootProject.ext.dependencies.parse
+    implementation rootProject.ext.dependencies.eventbus
+    implementation rootProject.ext.dependencies.utils
+    implementation rootProject.ext.dependencies.itemDecoration
+    implementation rootProject.ext.dependencies.zxing
+    implementation rootProject.ext.dependencies.onhttp
+    implementation rootProject.ext.dependencies.nohttp
+    implementation rootProject.ext.dependencies.agentweb
+    implementation rootProject.ext.dependencies.sonic
+    implementation rootProject.ext.dependencies.PhotoView
+    implementation files('libs\\lib-ios-dialog-release.aar')
+    //底部tabBar
+    implementation('me.majiajie:pager-bottom-tab-strip:2.2.5') {
+        exclude group: 'com.android.support'
+    }
+    //聊天室
+    implementation 'com.koushikdutta.async:androidasync:2.2.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+    //Banner轮播图
+    implementation 'com.github.xiaohaibin:XBanner:1.7.0'
+    //popwindow
+    implementation 'com.lxj:xpopup:2.0.5'
+
+
+    //图片选择器
+    api 'io.github.lucksiege:pictureselector:v2.7.3-rc08'
+    api "androidx.camera:camera-camera2:1.1.0-alpha08"
+
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.11'
+
+    api ('com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.1.6-jitpack'){
+        exclude module: 'jetified-gsyVideoPlayer-base-v8.1.6-jitpack'
+    }
+}

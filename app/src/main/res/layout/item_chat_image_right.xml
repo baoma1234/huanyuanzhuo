@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    android:paddingTop="10dp"
+    >
+
+    <FrameLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/time"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_nickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/avatar_container"
+        android:gravity="center"
+        android:textColor="@color/nickName"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/text_nickName"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:textColor="@color/gray3"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_is_ziliao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/time"
+        android:src="@mipmap/ic_chat_ziliao" />
+
+    <caixin.android.com.widget.MyImageView
+        android:id="@+id/img"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toLeftOf="@id/avatar_container"
+        android:adjustViewBounds="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:riv_corner_radius="5dp"
+        />
+
+    <FrameLayout
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_alignTop="@id/img"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/img"
+        >
+
+        <ImageView
+            android:id="@+id/icon_fail"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_chat_msg_warn"
+            android:visibility="invisible"
+            />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/anim_loading"
+            android:indeterminateOnly="true"
+            android:visibility="invisible"
+            />
+
+    </FrameLayout>
+</RelativeLayout>

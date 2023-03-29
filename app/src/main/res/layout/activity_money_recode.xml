@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="caixin.android.com.viewmodel.MomoExchangeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <caixin.android.com.widget.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:titleBarBackground="@color/colorPrimary"
+            app:titleBarLeftImage="@mipmap/icon_back" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/sr_withdraw_recode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_withdraw_recode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</layout>

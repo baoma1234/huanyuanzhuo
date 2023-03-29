@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/edit_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="12dp"
+        android:layout_margin="0.5dp"
+        android:background="@color/white"
+        android:paddingRight="15dp"
+        android:paddingBottom="12dp"
+        android:text="修改备注" />
+
+    <TextView
+        android:id="@+id/delete_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0.5dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingTop="12dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="12dp"
+        android:text="删除备注" />
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingStart="@dimen/dp_20"
+        android:text="name"
+        android:textColor="@color/main_black"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+    <caixin.android.com.widget.CodeContainer
+        android:id="@+id/cc_container"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_toEndOf="@id/tv_name"
+        app:is_single_line="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_line" />
+</RelativeLayout>

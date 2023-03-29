@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qmui_config_color_gray_9"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_jin"
+                style="@style/ChooseCodeTextStyle"
+                android:text="金" />
+
+            <TextView
+                android:id="@+id/tv_mu"
+                style="@style/ChooseCodeTextStyle"
+                android:text="木" />
+
+            <TextView
+                android:id="@+id/tv_shui"
+                style="@style/ChooseCodeTextStyle"
+                android:text="水" />
+
+            <TextView
+                android:id="@+id/tv_huo"
+                style="@style/ChooseCodeTextStyle"
+                android:text="火" />
+
+            <TextView
+                android:id="@+id/tv_tu"
+                style="@style/ChooseCodeTextStyle"
+                android:text="土" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_gou"
+                style="@style/ChooseCodeTextStyle"
+                android:text="狗" />
+            <TextView
+                android:id="@+id/tv_ji"
+                style="@style/ChooseCodeTextStyle"
+                android:text="鸡" />
+            <TextView
+                android:id="@+id/tv_hou"
+                style="@style/ChooseCodeTextStyle"
+                android:text="猴" />
+            <TextView
+                android:id="@+id/tv_yang"
+                style="@style/ChooseCodeTextStyle"
+                android:text="羊" />
+
+            <TextView
+                android:id="@+id/tv_ma"
+                style="@style/ChooseCodeTextStyle"
+                android:text="马" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_she"
+                style="@style/ChooseCodeTextStyle"
+                android:text="蛇" />
+            <TextView
+                android:id="@+id/tv_niu"
+                style="@style/ChooseCodeTextStyle"
+                android:text="牛" />
+            <TextView
+                android:id="@+id/tv_long"
+                style="@style/ChooseCodeTextStyle"
+                android:text="龙" />
+            <TextView
+                android:id="@+id/tv_tuzi"
+                style="@style/ChooseCodeTextStyle"
+                android:text="兔" />
+
+            <TextView
+                android:id="@+id/tv_hu"
+                style="@style/ChooseCodeTextStyle"
+                android:text="虎" />
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_shu"
+                style="@style/ChooseCodeTextStyle"
+                android:text="鼠" />
+
+            <TextView
+                android:id="@+id/tv_zhu"
+                style="@style/ChooseCodeTextStyle"
+                android:text="猪" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_wei0"
+                style="@style/ChooseCodeTextStyle"
+                android:text="0尾" />
+
+            <TextView
+                android:id="@+id/tv_wei1"
+                style="@style/ChooseCodeTextStyle"
+                android:text="1尾" />
+
+            <TextView
+                android:id="@+id/tv_wei2"
+                style="@style/ChooseCodeTextStyle"
+                android:text="2尾" />
+
+            <TextView
+                android:id="@+id/tv_wei3"
+                style="@style/ChooseCodeTextStyle"
+                android:text="3尾" />
+
+            <TextView
+                android:id="@+id/tv_wei4"
+                style="@style/ChooseCodeTextStyle"
+                android:text="4尾" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_wei5"
+                style="@style/ChooseCodeTextStyle"
+                android:text="5尾" />
+
+            <TextView
+                android:id="@+id/tv_wei6"
+                style="@style/ChooseCodeTextStyle"
+                android:text="6尾" />
+
+            <TextView
+                android:id="@+id/tv_wei7"
+                style="@style/ChooseCodeTextStyle"
+                android:text="7尾" />
+
+            <TextView
+                android:id="@+id/tv_wei8"
+                style="@style/ChooseCodeTextStyle"
+                android:text="8尾" />
+
+            <TextView
+                android:id="@+id/tv_wei9"
+                style="@style/ChooseCodeTextStyle"
+                android:text="9尾" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dawei"
+                style="@style/ChooseCodeTextStyle"
+                android:text="大尾" />
+
+            <TextView
+                android:id="@+id/tv_xiaowei"
+                style="@style/ChooseCodeTextStyle"
+                android:text="小尾" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tou0"
+                style="@style/ChooseCodeTextStyle"
+                android:text="0头" />
+
+            <TextView
+                android:id="@+id/tv_tou1"
+                style="@style/ChooseCodeTextStyle"
+                android:text="1头" />
+
+            <TextView
+                android:id="@+id/tv_tou2"
+                style="@style/ChooseCodeTextStyle"
+                android:text="2头" />
+
+            <TextView
+                android:id="@+id/tv_tou3"
+                style="@style/ChooseCodeTextStyle"
+                android:text="3头" />
+
+            <TextView
+                android:id="@+id/tv_tou4"
+                style="@style/ChooseCodeTextStyle"
+                android:text="4头" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_men1"
+                style="@style/ChooseCodeTextStyle"
+                android:text="1门" />
+
+            <TextView
+                android:id="@+id/tv_men2"
+                style="@style/ChooseCodeTextStyle"
+                android:text="2门" />
+
+            <TextView
+                android:id="@+id/tv_men3"
+                style="@style/ChooseCodeTextStyle"
+                android:text="3门" />
+
+            <TextView
+                android:id="@+id/tv_men4"
+                style="@style/ChooseCodeTextStyle"
+                android:text="4门" />
+
+            <TextView
+                android:id="@+id/tv_men5"
+                style="@style/ChooseCodeTextStyle"
+                android:text="5门" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_duan1"
+                style="@style/ChooseCodeTextStyle"
+                android:background="@drawable/choose_code_tv_bg"
+                android:text="1段" />
+
+            <TextView
+                android:id="@+id/tv_duan2"
+                style="@style/ChooseCodeTextStyle"
+                android:text="2段" />
+
+            <TextView
+                android:id="@+id/tv_duan3"
+                style="@style/ChooseCodeTextStyle"
+                android:text="3段" />
+
+            <TextView
+                android:id="@+id/tv_duan4"
+                style="@style/ChooseCodeTextStyle"
+                android:text="4段" />
+
+            <TextView
+                android:id="@+id/tv_duan5"
+                style="@style/ChooseCodeTextStyle"
+                android:text="5段" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_duan6"
+                style="@style/ChooseCodeTextStyle"
+                android:text="6段" />
+
+            <TextView
+                android:id="@+id/tv_duan7"
+                style="@style/ChooseCodeTextStyle"
+                android:text="7段" />
+
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_he1"
+                style="@style/ChooseCodeTextStyle"
+                android:text="1合" />
+
+            <TextView
+                android:id="@+id/tv_he2"
+                style="@style/ChooseCodeTextStyle"
+                android:text="2合" />
+
+            <TextView
+                android:id="@+id/tv_he3"
+                style="@style/ChooseCodeTextStyle"
+                android:text="3合" />
+
+            <TextView
+                android:id="@+id/tv_he4"
+                style="@style/ChooseCodeTextStyle"
+                android:text="4合" />
+
+            <TextView
+                android:id="@+id/tv_he5"
+                style="@style/ChooseCodeTextStyle"
+                android:text="5合" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_he6"
+                style="@style/ChooseCodeTextStyle"
+                android:text="6合" />
+
+            <TextView
+                android:id="@+id/tv_he7"
+                style="@style/ChooseCodeTextStyle"
+                android:text="7合" />
+
+            <TextView
+                android:id="@+id/tv_he8"
+                style="@style/ChooseCodeTextStyle"
+                android:text="8合" />
+
+            <TextView
+                android:id="@+id/tv_he9"
+                style="@style/ChooseCodeTextStyle"
+                android:text="9合" />
+
+            <TextView
+                android:id="@+id/tv_he10"
+                style="@style/ChooseCodeTextStyle"
+                android:text="10合" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_he11"
+                style="@style/ChooseCodeTextStyle"
+                android:text="11合" />
+
+            <TextView
+                android:id="@+id/tv_he12"
+                style="@style/ChooseCodeTextStyle"
+                android:text="12合" />
+
+            <TextView
+                android:id="@+id/tv_he13"
+                style="@style/ChooseCodeTextStyle"
+                android:text="13合" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_toudan0"
+                style="@style/ChooseCodeTextStyle"
+                android:text="0头单" />
+
+            <TextView
+                android:id="@+id/tv_toudan1"
+                style="@style/ChooseCodeTextStyle"
+                android:text="1头单" />
+
+            <TextView
+                android:id="@+id/tv_toudan2"
+                style="@style/ChooseCodeTextStyle"
+                android:text="2头单" />
+
+            <TextView
+                android:id="@+id/tv_toudan3"
+                style="@style/ChooseCodeTextStyle"
+                android:text="3头单" />
+
+            <TextView
+                android:id="@+id/tv_toudan4"
+                style="@style/ChooseCodeTextStyle"
+                android:text="4头单" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_toushuang0"
+                style="@style/ChooseCodeTextStyle"
+                android:text="0头双" />
+
+            <TextView
+                android:id="@+id/tv_toushuang1"
+                style="@style/ChooseCodeTextStyle"
+                android:text="1头双" />
+
+            <TextView
+                android:id="@+id/tv_toushuang2"
+                style="@style/ChooseCodeTextStyle"
+                android:text="2头双" />
+
+            <TextView
+                android:id="@+id/tv_toushuang3"
+                style="@style/ChooseCodeTextStyle"
+                android:text="3头双" />
+
+            <TextView
+                android:id="@+id/tv_toushuang4"
+                style="@style/ChooseCodeTextStyle"
+                android:text="4头双" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_hongdan"
+                style="@style/ChooseCodeTextStyle"
+                android:text="红单" />
+
+            <TextView
+                android:id="@+id/tv_hongshuang"
+                style="@style/ChooseCodeTextStyle"
+                android:text="红双" />
+
+            <TextView
+                android:id="@+id/tv_landan"
+                style="@style/ChooseCodeTextStyle"
+                android:text="蓝单" />
+
+            <TextView
+                android:id="@+id/tv_lanshuang"
+                style="@style/ChooseCodeTextStyle"
+                android:text="蓝双" />
+
+            <TextView
+                android:id="@+id/tv_lvdan"
+                style="@style/ChooseCodeTextStyle"
+                android:text="绿单" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_lvshuang"
+                style="@style/ChooseCodeTextStyle"
+                android:text="绿双" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_hongbo"
+                style="@style/ChooseCodeTextStyle"
+                android:text="红波" />
+
+            <TextView
+                android:id="@+id/tv_lanbo"
+                style="@style/ChooseCodeTextStyle"
+                android:text="蓝波" />
+
+            <TextView
+                android:id="@+id/tv_lvbo"
+                style="@style/ChooseCodeTextStyle"
+                android:text="绿波" />
+
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_jiaqian"
+                style="@style/ChooseCodeTextStyle"
+                android:text="家禽" />
+
+            <TextView
+                android:id="@+id/tv_yeshou"
+                style="@style/ChooseCodeTextStyle"
+                android:text="野兽" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_da"
+                style="@style/ChooseCodeTextStyle"
+                android:text="大" />
+
+            <TextView
+                android:id="@+id/tv_xiao"
+                style="@style/ChooseCodeTextStyle"
+                android:text="小" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_xiaodan"
+                style="@style/ChooseCodeTextStyle"
+                android:text="小单" />
+
+            <TextView
+                android:id="@+id/tv_xiaoshuang"
+                style="@style/ChooseCodeTextStyle"
+                android:text="小双" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_heda"
+                style="@style/ChooseCodeTextStyle"
+                android:text="合大" />
+
+            <TextView
+                android:id="@+id/tv_hexiao"
+                style="@style/ChooseCodeTextStyle"
+                android:text="合小" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_dan"
+                style="@style/ChooseCodeTextStyle"
+                android:text="单" />
+
+            <TextView
+                android:id="@+id/tv_shuang"
+                style="@style/ChooseCodeTextStyle"
+                android:text="双" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_dadan"
+                style="@style/ChooseCodeTextStyle"
+                android:text="大单" />
+
+            <TextView
+                android:id="@+id/tv_dashuang"
+                style="@style/ChooseCodeTextStyle"
+                android:text="大双" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_hedan"
+                style="@style/ChooseCodeTextStyle"
+                android:text="合单" />
+
+            <TextView
+                android:id="@+id/tv_heshuang"
+                style="@style/ChooseCodeTextStyle"
+                android:text="合双" />
+
+            <TextView style="@style/ChooseCodeTextStyles" />
+            <TextView style="@style/ChooseCodeTextStyles" />
+            <TextView style="@style/ChooseCodeTextStyles" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

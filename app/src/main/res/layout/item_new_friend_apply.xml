@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_row_weixin"
+    android:background="@drawable/bg_layout_white"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="@dimen/height_row_weixin"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/height_row_weixin"
+            android:layout_height="@dimen/height_row_weixin"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@mipmap/default_avatar" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/avatar_container"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:layout_marginLeft="8dp"
+            android:ellipsize="end"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/apply_add_friend"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>
+

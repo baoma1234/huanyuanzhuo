@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="caixin.android.com.viewmodel.HomeViewModel" />
+
+        <variable
+            name="viewModel"
+            type="caixin.android.com.viewmodel.HomeViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_gray"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:tint="@color/color_333333"      android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:onClick="@{() -> viewModel.onBackPressed()}"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/icon_back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/online_report"
+                android:textColor="@color/color_333333"
+                android:textSize="18sp"
+                android:typeface="monospace"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:textColor="@color/color_333333"
+                android:padding="5dp"
+                android:text="@string/submit"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/bg_main_white"
+            android:gravity="left|top"
+            android:hint="@string/report_introduce"
+            android:minLines="8"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textSize="14sp" />
+
+        <caixin.android.com.widget.UploadPictureContainer
+            android:id="@+id/upc_img_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="10dp"
+                android:tint="@color/color_333333"
+                android:paddingRight="10dp"
+                android:src="@mipmap/icon_back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/multiple_send_assistant"
+                android:textColor="@color/color_333333"
+                android:textSize="18sp"
+                android:typeface="monospace"
+                tools:ignore="HardcodedText,RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/tv_choose_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="全选"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                android:typeface="monospace"
+                tools:ignore="HardcodedText,RelativeOverlap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_friend"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_white_with_radius_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical" />
+
+
+            <CheckBox
+                android:id="@+id/cb_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="18dp"
+                android:background="@null"
+                android:button="@drawable/selector_check_select"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/linen" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_group"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_white_with_radius_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_group"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical" />
+
+            <CheckBox
+                android:id="@+id/cb_group"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="18dp"
+                android:background="@null"
+                android:button="@drawable/selector_check_select"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/linen" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/linen" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</layout>

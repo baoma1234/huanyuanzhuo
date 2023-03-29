@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.MOMOExchangeRecordActivity">
+
+        <caixin.android.com.widget.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:titleBarBackground="@color/colorPrimary"
+            app:titleBarLeftImage="@mipmap/icon_back" />
+
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/qmui_config_color_gray_9"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_12"
+                        android:text="当前兑换彩金金额："
+                        android:textColor="@color/main_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_current_exchange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0元"
+                        android:textColor="#FF5A7E"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</layout>

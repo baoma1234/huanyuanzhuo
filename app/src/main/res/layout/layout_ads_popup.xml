@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_white_radius"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/red">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:text="平台公告"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@mipmap/close_while_bg" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/tv_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@mipmap/ic_ad_bg"
+            android:gravity="center"
+            android:text="立即前往"
+            android:textColor="#7F0A1C"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</RelativeLayout>

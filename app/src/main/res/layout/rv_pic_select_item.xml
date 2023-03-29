@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="默认线路" />
+
+    <ImageView
+        android:id="@+id/iv_selector"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:background="@mipmap/selected" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray" />
+</RelativeLayout>

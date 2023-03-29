@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp">
+
+    <FrameLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:scaleType="centerCrop"
+            app:riv_oval="true" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_nickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/avatar_container"
+        android:gravity="center"
+        android:textColor="@color/nickName"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/text_nickName"
+        android:gravity="center"
+        android:textColor="@color/gray3"
+        android:textSize="13sp" />
+
+    <caixin.android.com.widget.BubbleLayout
+        android:id="@+id/bl_red_pack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_nickName"
+        android:layout_toRightOf="@id/avatar_container"
+        android:clickable="false"
+        android:minHeight="40dp"
+        android:paddingTop="7dp"
+        app:arrowDirecrion="left"
+        app:arrowHeight="5dp"
+        app:arrowPositionY="20dp"
+        app:arrowWidth="10dp"
+        app:bubbleBgColor="@color/pk_red_chat"
+        app:bubbleRadius="5dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_red_pack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:src="@mipmap/packet_item1"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/default_greetings"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/red_pack_status_unrob"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@color/white"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="红包"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </caixin.android.com.widget.BubbleLayout>
+
+</RelativeLayout>

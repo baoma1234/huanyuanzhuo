@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/yellow_transparent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/icon_back"
+                    android:tint="@color/color_333333"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="个人信息"
+                    android:textColor="@color/color_333333"
+                    android:textSize="18sp"
+                    android:typeface="monospace"
+                    tools:ignore="HardcodedText,RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/iv_group_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/chat_right_more"
+                    android:tint="@color/color_333333" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_follow_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_notify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_notify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/anim_gao" />
+
+                    <TextView
+                        android:id="@+id/tv_notify"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingStart="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_12"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/main_black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skip_1"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_text_view_gray_frame"
+                        android:gravity="center"
+                        android:text="永盛国际"
+                        android:textColor="@color/pk_red_gray"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/skip_2"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_text_view_gray_frame"
+                        android:gravity="center"
+                        android:text="永盛国际"
+                        android:textColor="@color/pk_red_gray"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/skip_3"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_text_view_gray_frame"
+                        android:gravity="center"
+                        android:text="永盛国际"
+                        android:textColor="@color/pk_red_gray"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/srlRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srlEnableAutoLoadMore="false"
+                app:srlEnableLoadMore="false"
+                app:srlEnableRefresh="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/call_me_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/yellow_transparent"
+                            android:padding="5dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/call_me_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="有人@你"
+                                android:textColor="@color/pk_red_gray" />
+
+                            <ImageView
+                                android:id="@+id/iv_close_call_me"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@mipmap/delete" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray2"
+                            app:fastScrollEnabled="true"
+                            app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+                            app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+                            app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+                            app:fastScrollVerticalTrackDrawable="@drawable/line_drawable" />
+                    </LinearLayout>
+
+                    <caixin.android.com.widget.BulletScreenView
+                        android:id="@+id/danmu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"></caixin.android.com.widget.BulletScreenView>
+                </RelativeLayout>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_reply"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_gray_40_radius_4"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_reply_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="33333"
+                    android:layout_toLeftOf="@+id/iv_reply_close"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/color_666666"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/iv_reply_close"
+                    android:layout_centerVertical="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/close_02" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_chat_input"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1">
+
+                    <caixin.android.com.widget.ait.MsgEditText
+                        android:id="@+id/edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_chat_room_input"
+                        android:gravity="center_vertical"
+                        android:hint="@string/im_send_msg"
+                        android:imeActionLabel="@string/send"
+                        android:imeOptions="actionSend"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/gray1"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/btn_voice_record_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_chat_voice_record_0"
+                        android:gravity="center"
+                        android:text="@string/im_press_say"
+                        android:textColor="@color/gray1"
+                        android:textSize="15sp"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <caixin.android.com.widget.DrawableCheckBox
+                    android:id="@+id/btn_face"
+                    android:layout_width="36dp"
+                    android:layout_height="46dp"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTint="@color/gray1"
+                    app:dt_right_drawable="@drawable/bg_chat_btn_face"
+                    app:dt_right_height="26dp"
+                    app:dt_right_width="26dp" />
+
+                <ImageView
+                    android:id="@+id/btn_add"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/icon_chat_add"
+                    android:tint="@color/gray1" />
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_text"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="5dp"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="5dp"
+                    android:text="@string/send"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_no_talk"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_chat_voice_record_0"
+                        android:gravity="center"
+                        android:text="@string/no_talk"
+                        android:textColor="@color/gray1"
+                        android:textSize="15sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <caixin.android.com.widget.ChatRoomUnreadView
+            android:id="@+id/iv_scroll_to_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="76dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

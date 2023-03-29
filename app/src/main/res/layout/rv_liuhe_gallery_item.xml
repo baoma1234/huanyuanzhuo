@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/web_default" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/iv_icon"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_12"
+        android:textColor="@color/main_black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/tv_name"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingBottom="8dp"
+        android:text="已更"
+        android:textColor="@color/color_ffb3bf"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:src="@mipmap/next" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/main_line" />
+</RelativeLayout>

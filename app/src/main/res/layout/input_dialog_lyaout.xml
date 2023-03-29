@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_white_selector_all">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="输入支付密码"
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/tv_forget_pay_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:text="忘记密码？"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:text="关闭"
+            android:textColor="#333333" />
+
+        <caixin.android.com.widget.paypassword.PayPwdEditText
+            android:id="@+id/ppet"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

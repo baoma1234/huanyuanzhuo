@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="caixin.android.com.viewmodel.ContactViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/title_bar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_main_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_layout_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_group_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_layout_white"
+                        android:clickable="false"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_group_avatar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/group_avatar_detail"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_group_avatar"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/tv_group_avatar" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/jiantou_right" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/bg_main_white" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_group_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_layout_white"
+                        android:clickable="false"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_group_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/group_name_detail"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/jiantou_right" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/bg_main_white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_group_own_manager"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/group_own_and_manager"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_group_own_manager_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/jiantou_down" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bg_main_white" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_group_own_manager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_group_member"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/member"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_group_member_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/jiantou_down" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bg_main_white" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_group_member"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_edit_manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_layout_white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_add_group_manager"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_layout_white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/add_group_manager"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/jiantou_right" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/bg_main_white" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_delete_manager"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_layout_white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/delete_group_manager"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/jiantou_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_edit_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_layout_white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_add_group_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/add_group_member"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/jiantou_right" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/bg_main_white" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_remove_group_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/remove_group_member"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/jiantou_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_layout_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_find_chat_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_layout_white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/find_chat_history"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/jiantou_right" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/bg_main_white" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_clear_chat_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_layout_white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/clean_chat_history"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/jiantou_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_is_no_talk"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_layout_white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/group_forbid_talk"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/switch_is_no_talk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_leave_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_layout_white"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/leave_group"
+                    android:textColor="@color/red"></TextView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

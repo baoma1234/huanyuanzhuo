@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="59dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/list_itease_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/avatar_container"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true">
+
+            <caixin.android.com.widget.EaseImageView
+                android:id="@+id/avatar"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_avatar" />
+
+            <TextView
+                android:id="@+id/unread_msg_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/avatar_container"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="160dp"
+            android:textColor="@color/list_itease_primary_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_guanfang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/name"
+            android:layout_alignBottom="@+id/name"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/name"
+            android:src="@mipmap/icon_guanfang" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="7dp"
+            android:textColor="@color/list_itease_secondary_color"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/msg_state"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/avatar_container"
+            android:visibility="gone"
+            app:srcCompat="@mipmap/msg_state_fail_resend" />
+
+        <TextView
+            android:id="@+id/mentioned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/msg_state"
+            android:paddingLeft="7dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:text="@string/were_mentioned"
+            android:textColor="#e84e40"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/time"
+            android:layout_toRightOf="@id/mentioned"
+            android:ellipsize="end"
+            android:padding="7dp"
+            android:singleLine="true"
+            android:textColor="@color/list_itease_secondary_color"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+
+        <ImageView
+            android:id="@+id/iv_is_top"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@mipmap/msg_top_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#ff72a5"
+        android:gravity="center"
+        android:text="@string/delete" />
+</LinearLayout>

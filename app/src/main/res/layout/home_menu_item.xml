@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:gravity="center"
+    android:layout_marginTop="4dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_content"
+        android:background="@mipmap/ic_home_menu_quer_code"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="澳门图库"
+        android:textSize="13sp" />
+</LinearLayout>

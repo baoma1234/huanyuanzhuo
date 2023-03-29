@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@mipmap/animal_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_1"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_2"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_3"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_4"
+                    tools:ignore="ContentDescription" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_12"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_12"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_transparent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_transparent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_5"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_11"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_11"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_transparent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_transparent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_6"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_10"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_10"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_9"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_8"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_wave_animal_7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_wave_animal_7"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_tv_code_detail"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text=""
+            android:textColor="@color/choose_code_tv_color"
+            android:textSize="@dimen/sp_13" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_tv_code_detail"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/choose_code_tv_color"
+            android:textSize="@dimen/sp_13" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_tv_code_detail"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/choose_code_tv_color"
+            android:textSize="@dimen/sp_13" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_tv_code_detail"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/choose_code_tv_color"
+            android:textSize="@dimen/sp_13" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_tv_code_detail"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/choose_code_tv_color"
+            android:textSize="@dimen/sp_13" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_tv_code_detail"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/choose_code_tv_color"
+            android:textSize="@dimen/sp_13" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_tv_code_detail"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/choose_code_tv_color"
+            android:textSize="@dimen/sp_13" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_tv_code_detail"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/choose_code_tv_color"
+            android:textSize="@dimen/sp_13" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="caixin.android.com.viewmodel.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipChildren="false">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true" />
+
+                <View
+                    android:id="@+id/view_translate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black_translate"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:clipChildren="false">
+
+                <me.majiajie.pagerbottomtabstrip.PageBottomTabLayout
+                    android:id="@+id/pager_bottom_tab_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    app:elevation="5dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

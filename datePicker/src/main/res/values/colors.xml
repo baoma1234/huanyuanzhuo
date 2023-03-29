@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="datepicker_selectedTextColor">#C52133</color>
+    <color name="datepicker_divider">#cccccc</color>
+</resources>
