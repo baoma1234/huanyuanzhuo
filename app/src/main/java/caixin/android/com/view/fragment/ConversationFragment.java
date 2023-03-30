@@ -55,10 +55,12 @@ public class ConversationFragment extends BaseFragment<FragmentConversationBindi
 
     private ConversationAdapter conversationAdapter;
     private int deleteConversationPosition;
+    private HomeAdView[] homeAdViews;
 
     @Override
     public void initData(Bundle savedInstanceState) {
         initRecycleView();
+        homeAdViews = new HomeAdView[]{mBinding.homeAd, mBinding.homeAd1, mBinding.homeAd2, mBinding.homeAd3};
         mBinding.searchBarView.query.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 conversationAdapter.getFilter().filter(s);
@@ -91,8 +93,7 @@ public class ConversationFragment extends BaseFragment<FragmentConversationBindi
             popWindow.showPopupWindow(mBinding.ivAddMore);
         });
         showDialog("");
-
-        mViewModel.getZhuanpanState();
+        mViewModel.getFuDongState();
     }
 
     private long oldTime;
@@ -163,21 +164,29 @@ public class ConversationFragment extends BaseFragment<FragmentConversationBindi
         mViewModel.uc.init.observe(this, this::handleInit);
         mViewModel.uc.deleteConversation.observe(this, this::handleDeleteConversation);
         mViewModel.uc.zhuanPanStatusEntityMutableLiveData.observe(this, this::handleZhuanPan);
+        mViewModel.uc.fudongEntityMutableLiveData.observe(this, this::handleFuDong);
+    }
+
+    private void handleFuDong(List<ZhuanPanStatusEntity> zhuanPanStatusEntities) {
+        if (zhuanPanStatusEntities == null || zhuanPanStatusEntities.size() == 0) {
+            return;
+        }
+
+        for (int i = 0; i < zhuanPanStatusEntities.size() && i < 4; i++) {
+            homeAdViews[i].setVisibility(View.VISIBLE);
+            homeAdViews[i].setImgUrl(zhuanPanStatusEntities.get(i).getImgurl());
+            int finalI = i;
+            homeAdViews[i].setADListener(new HomeAdView.MyClick() {
+                @Override
+                public void onClick() {
+                    openBrose(getContext(), zhuanPanStatusEntities.get(finalI).getUrl());
+                }
+            });
+        }
     }
 
     private void handleZhuanPan(ZhuanPanStatusEntity zhuanPanStatusEntity) {
-        if (zhuanPanStatusEntity.getStatus().equals("1")) {
-            mBinding.homeAd.setVisibility(View.VISIBLE);
-            mBinding.homeAd.setADListener(new HomeAdView.MyClick() {
-                @Override
-                public void onClick() {
-                    openBrose(getContext(), zhuanPanStatusEntity.getUrl());
-                }
-            });
-        } else {
-            mBinding.homeAd.setVisibility(View.GONE);
 
-        }
     }
 
     private void openBrose(Context context, String url) {

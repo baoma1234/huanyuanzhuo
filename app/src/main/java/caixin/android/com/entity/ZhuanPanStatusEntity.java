@@ -4,15 +4,15 @@ import java.io.Serializable;
 
 public class ZhuanPanStatusEntity implements Serializable {
 
-    private String status;  // status 1开 2关闭
+    private String imgurl;  // status 1开 2关闭
     private String url;
 
-    public String getStatus() {
-        return status;
+    public String getImgurl() {
+        return imgurl;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
     }
 
     public String getUrl() {
@@ -26,7 +26,7 @@ public class ZhuanPanStatusEntity implements Serializable {
     @Override
     public String toString() {
         return "ZhuanPanStatusEntity{" +
-                "status='" + status + '\'' +
+                "status='" + imgurl + '\'' +
                 ", url='" + url + '\'' +
                 '}';
     }

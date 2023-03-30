@@ -1,6 +1,7 @@
 package caixin.android.com.widget;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -9,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.caixin.huanyu.R;
+
+import caixin.android.com.utils.ImgLoader;
 
 public class HomeAdView extends RelativeLayout {
     private int lastX;
@@ -83,6 +86,13 @@ public class HomeAdView extends RelativeLayout {
         mLastX = x;//记录上次的坐标
         mLastY = y;
         return true;
+    }
+
+    public void setImgUrl(String imgurl) {
+        if (TextUtils.isEmpty(imgurl))
+            return;
+        if (ivAd != null)
+            ImgLoader.GlideLoad(ivAd, imgurl, R.mipmap.home_lottery_guanggao);
     }
 
     public interface MyClick {

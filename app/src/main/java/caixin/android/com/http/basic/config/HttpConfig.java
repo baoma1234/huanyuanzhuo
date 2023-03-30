@@ -35,6 +35,6 @@ public class HttpConfig {
     public static   String HOST = "http://11223api.com";
 
 
-    public static final String ADDRESS_URL = "https://caixinpublic.oss-accelerate.aliyuncs.com/huanyu.json";
+    public static final String ADDRESS_URL = "http://5841831.com/huanyu.json";
 
 }

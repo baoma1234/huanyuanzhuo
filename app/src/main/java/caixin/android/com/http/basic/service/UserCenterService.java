@@ -250,6 +250,9 @@ public interface UserCenterService {
     @POST("/api/em/zhuanpan")
     Observable<BaseResponse<ZhuanPanStatusEntity>> getZhuanpanState(@Query("token") String token);
 
+    @POST("/api/em/fudong")
+    Observable<BaseResponse<List<ZhuanPanStatusEntity>>> getFudongState(@Query("token") String token);
+
 
     @POST("/api/user/getSign")
     Observable<BaseResponse<List<String>>> getSignDays(@Query("token") String token);

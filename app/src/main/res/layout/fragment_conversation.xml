@@ -73,9 +73,37 @@
         <caixin.android.com.widget.HomeAdView
             android:id="@+id/home_ad"
             android:layout_width="70dp"
+            android:visibility="gone"
             android:layout_height="68dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="170dp" />
+
+        <caixin.android.com.widget.HomeAdView
+            android:layout_below="@+id/home_ad"
+            android:id="@+id/home_ad1"
+            android:visibility="gone"
+            android:layout_width="70dp"
+            android:layout_height="68dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp" />
+
+        <caixin.android.com.widget.HomeAdView
+            android:layout_below="@+id/home_ad1"
+            android:id="@+id/home_ad2"
+            android:layout_width="70dp"
+            android:visibility="gone"
+            android:layout_height="68dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp" />
+
+        <caixin.android.com.widget.HomeAdView
+            android:layout_below="@+id/home_ad2"
+            android:id="@+id/home_ad3"
+            android:visibility="gone"
+            android:layout_width="70dp"
+            android:layout_height="68dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp" />
 
     </RelativeLayout>
 

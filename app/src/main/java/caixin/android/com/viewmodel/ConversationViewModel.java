@@ -24,6 +24,7 @@ public class ConversationViewModel extends BaseViewModel<UserCenterModel> {
         public MutableLiveData<Object> deleteConversation = new MutableLiveData<>();
         public MutableLiveData<MyPlatformEntity> mPlatformsLiveData = new MutableLiveData<>();
         public MutableLiveData<ZhuanPanStatusEntity> zhuanPanStatusEntityMutableLiveData = new MutableLiveData<>();
+        public MutableLiveData<List<ZhuanPanStatusEntity>> fudongEntityMutableLiveData = new MutableLiveData<>();
     }
 
     public ConversationViewModel(@NonNull Application application, UserCenterModel model) {
@@ -102,6 +103,24 @@ public class ConversationViewModel extends BaseViewModel<UserCenterModel> {
             public void onSuccess(ZhuanPanStatusEntity data, String msg) {
                 uc.zhuanPanStatusEntityMutableLiveData.postValue(data);
                 showShortToast(msg);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                showShortToast(msg);
+            }
+
+            @Override
+            public void onDisconnected(String msg) {
+            }
+        });
+    }
+
+    public void getFuDongState() {
+        mModel.getFudongState(this, new BaseModel.Callback<List<ZhuanPanStatusEntity>>() {
+            @Override
+            public void onSuccess(List<ZhuanPanStatusEntity> data, String msg) {
+                uc.fudongEntityMutableLiveData.postValue(data);
             }
 
             @Override

@@ -473,6 +473,9 @@ public class UserCenterModel extends BaseModel {
     public void getZhuanpanState(BaseViewModel baseViewModel,  Callback<ZhuanPanStatusEntity> callback) {
         execute(getService(UserCenterService.class).getZhuanpanState(MMKVUtil.getUserInfo().getToken()), callback, baseViewModel);
     }
+    public void getFudongState(BaseViewModel baseViewModel,  Callback<List<ZhuanPanStatusEntity>> callback) {
+        execute(getService(UserCenterService.class).getFudongState(MMKVUtil.getUserInfo().getToken()), callback, baseViewModel);
+    }
 
     public void getUserInfo(int uid, final Callback callback) {
         UserRequest userRequest = new UserRequest();
