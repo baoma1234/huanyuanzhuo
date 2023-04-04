@@ -31,6 +31,7 @@ import caixin.android.com.base.BaseActivity;
 import caixin.android.com.base.BaseModel;
 import caixin.android.com.entity.OOSInfoEntity;
 import caixin.android.com.entity.UserInfoEntity;
+import caixin.android.com.http.basic.config.HttpConfig;
 import caixin.android.com.utils.GlideEngine1;
 import caixin.android.com.utils.ImgLoader;
 import caixin.android.com.utils.MMKVUtil;
@@ -159,7 +160,7 @@ public class UserInfoActivity extends BaseActivity<ActivityUserinfoBinding, User
 
             fileName = path.split("/")[path.split("/").length - 1];
             fileName = "tx_and/" + fileName;
-            mService = initOSS(OSS_ENDPOINT, bucketName, "http://112.121.164.18:6161/api/Sts/getStsOuah");
+            mService = initOSS(oosInfoEntity.getEndpoint(), oosInfoEntity.getBucket(), HttpConfig.HOST+"/api/Sts/getStsOuah");
             //设置上传的callback地址，目前暂时只支持putObject的回调
             mService.setCallbackAddress(oosInfoEntity.getUrl());
             String finalFileName = fileName;

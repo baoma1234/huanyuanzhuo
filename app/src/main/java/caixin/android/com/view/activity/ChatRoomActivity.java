@@ -78,6 +78,7 @@ import caixin.android.com.entity.base.BaseWebSocketResponse;
 import caixin.android.com.entity.chatroom.MessageResponse;
 import caixin.android.com.http.UserCenterModel;
 import caixin.android.com.http.WebSocketManager;
+import caixin.android.com.http.basic.config.HttpConfig;
 import caixin.android.com.utils.ActionUtil;
 import caixin.android.com.utils.AdvertisingUtil;
 import caixin.android.com.utils.ClickUtil;
@@ -1202,7 +1203,7 @@ public class ChatRoomActivity extends BaseActivity<ActivityChatRoomBinding, Chat
             } else {
                 fileName = "chat_and/" + fileName;
             }
-            mService = initOSS(OSS_ENDPOINT, bucketName, "http://112.121.164.18:6161/api/Sts/getStsOuah");
+            mService = initOSS(oosInfoEntity.getEndpoint(), oosInfoEntity.getBucket(), HttpConfig.HOST+"/api/Sts/getStsOuah");
             //设置上传的callback地址，目前暂时只支持putObject的回调
             mService.setCallbackAddress(oosInfoEntity.getUrl());
             String finalFileName = fileName;

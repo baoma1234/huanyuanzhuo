@@ -32,6 +32,7 @@ import caixin.android.com.base.BaseActivity;
 import caixin.android.com.base.BaseModel;
 import caixin.android.com.entity.AddMyNewsRequest;
 import caixin.android.com.entity.OOSInfoEntity;
+import caixin.android.com.http.basic.config.HttpConfig;
 import caixin.android.com.utils.GlideEngine1;
 import caixin.android.com.utils.MMKVUtil;
 import caixin.android.com.utils.OssService;
@@ -225,7 +226,7 @@ public class SendMyNewsActivity extends BaseActivity<ActivitySendMyNewsBinding, 
             }
 
             fileName = path.split("/")[path.split("/").length - 1];
-            mService = initOSS(OSS_ENDPOINT, bucketName, "http://112.121.164.18:6161/api/Sts/getStsOuah");
+            mService = initOSS(oosInfoEntity.getEndpoint(), oosInfoEntity.getBucket(), HttpConfig.HOST+"/api/Sts/getStsOuah");
             //设置上传的callback地址，目前暂时只支持putObject的回调
             mService.setCallbackAddress(oosInfoEntity.getUrl());
             String finalPath = path;
