@@ -60,7 +60,7 @@ public class ConversationFragment extends BaseFragment<FragmentConversationBindi
     @Override
     public void initData(Bundle savedInstanceState) {
         initRecycleView();
-        homeAdViews = new HomeAdView[]{mBinding.homeAd, mBinding.homeAd1, mBinding.homeAd2, mBinding.homeAd3};
+        homeAdViews = new HomeAdView[]{mBinding.homeAd, mBinding.homeAd1, mBinding.homeAd2, mBinding.homeAd3, mBinding.homeAd4};
         mBinding.searchBarView.query.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 conversationAdapter.getFilter().filter(s);
@@ -172,7 +172,7 @@ public class ConversationFragment extends BaseFragment<FragmentConversationBindi
             return;
         }
 
-        for (int i = 0; i < zhuanPanStatusEntities.size() && i < 4; i++) {
+        for (int i = 0; i < zhuanPanStatusEntities.size() && i < 5; i++) {
             homeAdViews[i].setVisibility(View.VISIBLE);
             homeAdViews[i].setImgUrl(zhuanPanStatusEntities.get(i).getImgurl());
             int finalI = i;
