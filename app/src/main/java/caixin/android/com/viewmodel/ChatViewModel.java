@@ -284,7 +284,7 @@ public class ChatViewModel extends BaseViewModel<UserCenterModel> {
      * 发送图片消息
      */
     public void sendPicToFriend(String url, String thumb, int toUid, int width, int height, boolean isZiliao) {
-        if (TextUtils.isEmpty(url) || TextUtils.isEmpty(thumb)) {
+        if (TextUtils.isEmpty(url) ) {
             return;
         }
         mModel.sendPicToFriend(MMKVUtil.getUserInfo().getId(), toUid, url, thumb, width, height, isZiliao, new BaseModel.Callback() {

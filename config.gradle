@@ -7,8 +7,8 @@ ext {
             applicationId    : "com.caixin.huanyu",
             minSdkVersion    : 19,
             targetSdkVersion : 29,
-            versionCode      : 525,
-            versionName      : "5.2.5",
+            versionCode      : 526,
+            versionName      : "5.2.6",
     ]
     //version配置
     versions = [
