@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProviders;
@@ -58,6 +60,7 @@ import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;
 import me.majiajie.pagerbottomtabstrip.item.NormalItemView;
 import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
 
+
 public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewModel> {
 
     private List<Fragment> mFragments = new ArrayList<>();
@@ -71,6 +74,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     Fragment conversationFragment;
     Fragment mineFragment;
     Fragment friendUpdateFragment;
+
+    private Handler mApplyHandler;
 
     public static MainActivity INSTANCE;
 
@@ -115,6 +120,17 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
         mViewModel.getPopInfo(noticePopRequest);
         mViewModel.getHomeImageAd();
         mViewModel.getHomeMenuList();
+
+        mApplyHandler = new Handler() {
+            @Override
+            public void handleMessage(@NonNull Message msg) {
+                super.handleMessage(msg);
+                mViewModel.getApplyStatus();
+                mApplyHandler.removeMessages(0);
+                mApplyHandler.sendEmptyMessageDelayed(0, 5000);
+            }
+        };
+        mApplyHandler.sendEmptyMessage(0);
     }
 
     private HomeAdDialog mHomeAdDialog;
@@ -348,7 +364,10 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     private WebSocketManager.ServerMessage serverMessage = new WebSocketManager.ServerMessage() {
         @Override
         public void onReceiveMessageFromServer(BaseWebSocketResponse baseWebSocketResponse) {
-            if (baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_SEND_MESSAGE) || baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_SEND_PIC) || baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_FRIEND_AGREE) || baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_FRIEND_APPLY)) {
+            if (baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_SEND_MESSAGE)
+                    || baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_SEND_PIC)
+                    || baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_FRIEND_AGREE)
+                    || baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_FRIEND_APPLY)) {
                 if (baseWebSocketResponse.getAct().equals(Extras.REQUEST_ACTION_FRIEND_APPLY)) {
                     UserInfoEntity userInfo = MMKVUtil.getUserInfo();
                     userInfo.setIsNew(1);
@@ -390,7 +409,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     protected void onResume() {
         super.onResume();
         WebSocketManager.getInstance().addServerReceive(TAG, serverMessage);
-        mViewModel.getApplyStatus();
     }
 
     @Override

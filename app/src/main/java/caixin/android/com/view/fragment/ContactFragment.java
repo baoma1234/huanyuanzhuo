@@ -123,7 +123,7 @@ public class ContactFragment extends BaseFragment<FragmentContactBinding, Contac
     }
 
     public void setOvalVisibility(boolean ovalVisibility) {
-
+        mBinding.unreadMsgNumber.setVisibility(ovalVisibility ? View.VISIBLE : View.GONE);
     }
 
     private void addToList(BaseFragment fragment) {
